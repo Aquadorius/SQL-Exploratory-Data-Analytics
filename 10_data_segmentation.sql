@@ -1,3 +1,4 @@
+
 /*
 ===============================================================================
 Data Segmentation Analysis
@@ -43,7 +44,7 @@ And find the total number of customers by each group
 WITH customer_spending AS (
     SELECT
         c.customer_key,
-        SUM(f.sales_amount) AS total_spending,
+        SUM(f.sales) AS total_spending,
         MIN(order_date) AS first_order,
         MAX(order_date) AS last_order,
         DATEDIFF(month, MIN(order_date), MAX(order_date)) AS lifespan
