@@ -1,3 +1,4 @@
+
 /*
 ===============================================================================
 Date Range Exploration 
@@ -20,8 +21,9 @@ FROM gold.fact_sales;
 
 -- Find the youngest and oldest customer based on birthdate
 SELECT
-    MIN(birthdate) AS oldest_birthdate,
-    DATEDIFF(YEAR, MIN(birthdate), GETDATE()) AS oldest_age,
-    MAX(birthdate) AS youngest_birthdate,
-    DATEDIFF(YEAR, MAX(birthdate), GETDATE()) AS youngest_age
+    MIN(birth_date) AS oldest_birthdate,
+    DATEDIFF(YEAR, MIN(birth_date), GETDATE()) AS oldest_age,
+    MAX(birth_date) AS youngest_birthdate,
+    DATEDIFF(YEAR, MAX(birth_date), GETDATE()) AS youngest_age
 FROM gold.dim_customers;
+
